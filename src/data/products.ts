@@ -1,4 +1,3 @@
-
 export interface Product {
   id: number;
   name: string;
@@ -178,22 +177,34 @@ export const products: Product[] = [
   }
 ];
 
-// Function to get a product by ID
+export const getAllCategories = (): string[] => {
+  const categoriesSet = new Set<string>();
+  
+  products.forEach(product => {
+    if (product.category) {
+      categoriesSet.add(product.category);
+    }
+  });
+  
+  return Array.from(categoriesSet).sort();
+};
+
+export const getProductsByCategory = (category: string): Product[] => {
+  return products.filter(product => product.category === category);
+};
+
 export const getProductById = (id: number): Product | undefined => {
   return products.find(product => product.id === id);
 };
 
-// Function to get featured products
 export const getFeaturedProducts = (): Product[] => {
   return products.filter(product => product.featured);
 };
 
-// Function to get best seller products
 export const getBestSellerProducts = (): Product[] => {
   return products.filter(product => product.bestSeller);
 };
 
-// Function to get new products
 export const getNewProducts = (): Product[] => {
   return products.filter(product => product.new);
 };
