@@ -1,10 +1,9 @@
-
 import React from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import FeaturedProducts from '../components/FeaturedProducts';
 import Footer from '../components/Footer';
-import { ChevronRight, HeadphoneIcon, Sparkles, Star, Zap } from 'lucide-react';
+import { ChevronRight, HeadphonesIcon, Sparkles, Star, Zap } from 'lucide-react';
 import { getBestSellerProducts, getNewProducts } from '../data/products';
 import ProductCard from '../components/ProductCard';
 
@@ -49,7 +48,7 @@ const Index: React.FC = () => {
               
               <div className="p-6 bg-gray-50 rounded-xl flex flex-col items-center text-center animate-fade-up" style={{ animationDelay: "300ms" }}>
                 <div className="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <HeadphoneIcon className="h-6 w-6 text-primary" />
+                  <HeadphonesIcon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-medium text-lg mb-2">24/7 Support</h3>
                 <p className="text-muted-foreground">Our dedicated team is always available to assist with any questions.</p>
